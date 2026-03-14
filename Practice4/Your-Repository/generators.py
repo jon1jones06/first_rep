@@ -25,6 +25,7 @@ def squares_range(a, b):
 
 
 a = int(input("a: "))
+
 b = int(input("b: "))
 
 for x in squares_range(a, b):

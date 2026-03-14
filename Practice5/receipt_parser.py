@@ -1,11 +1,6 @@
 import re
-import os
-
-current_folder = os.path.dirname(__file__) 
-file_path = os.path.join(current_folder, 'raw.txt')
-
 def solve_tasks():
-        with open(file_path, 'r', encoding='utf-8') as file:
+        with open('raw.txt', 'r', encoding='utf-8') as file:
             content = file.read()
             lines = content.splitlines()
 
@@ -32,6 +27,7 @@ def solve_tasks():
         def to_camel(s):
             words = s.split('_')
             return words[0] + ''.join(w.capitalize() for w in words[1:])
+        print("7. Snake to Camel:", to_camel("snake_case_string"))
         
         # 8
         print("8. Split at Upper:", re.findall(r'[A-Z][^A-Z]*', "SplitThisString"))
